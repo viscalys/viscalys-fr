@@ -132,8 +132,9 @@ window.VISCALYS_CHAT_API = "https://viscalys-chatbot.onrender.com/api/chat";
   async function getAnswer(q){
     if(window.VISCALYS_CHAT_API){
       try{
+        const en=isEn();
         const r=await fetch(window.VISCALYS_CHAT_API,{method:'POST',headers:{'Content-Type':'application/json'},
-          body:JSON.stringify({ system:PERSONA, message:q, lang:isEn()?'en':'fr' })});
+          body:JSON.stringify({ system:PERSONA + (en?' IMPORTANT: reply ONLY in English.':' IMPORTANT : réponds UNIQUEMENT en français.'), message:(en?'Reply in English. ':'Réponds en français. ')+q, lang:en?'en':'fr' })});
         const d=await r.json(); if(d && (d.reply||d.message)) return d.reply||d.message;
       }catch(e){ /* repli local */ }
     }
@@ -168,5 +169,7 @@ window.VISCALYS_CHAT_API = "https://viscalys-chatbot.onrender.com/api/chat";
     fab.onclick=open; panel.querySelector('#vx').onclick=close; panel.querySelector('#vsend').onclick=send;
     input.addEventListener('keydown',e=>{ if(e.key==='Enter') send(); });
     window.viscalysOpenChat=open;
+    // Retraduit le widget fraîchement injecté selon la langue courante
+    if(window.setLang) window.setLang(document.body.classList.contains('en')?'en':'fr');
   }
 })();

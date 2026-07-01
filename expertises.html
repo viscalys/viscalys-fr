@@ -297,7 +297,8 @@
   }
   async function answer(q){
     try{
-      const r=await fetch(VISCALYS_CHAT_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:q,lang:isEn()?'en':'fr'})});
+      const en=isEn();
+      const r=await fetch(VISCALYS_CHAT_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:(en?'Reply in English. ':'Réponds en français. ')+q, system:(en?'IMPORTANT: reply ONLY in English.':'IMPORTANT : réponds UNIQUEMENT en français.'), lang:en?'en':'fr'})});
       const d=await r.json(); if(d&&(d.reply||d.message)) return d.reply||d.message;
     }catch(e){}
     return localAnswer(q);
