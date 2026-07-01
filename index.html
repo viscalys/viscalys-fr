@@ -57,13 +57,13 @@
   .hero{ min-height:100vh; display:flex; align-items:center; position:relative;
     background:radial-gradient(circle at 75% 25%, #fff 0%, var(--beige) 55%); }
   .hero-inner{ position:relative; z-index:2; max-width:780px; }
-  .hero .badge-logo{ width:220px; height:220px; border-radius:50%;
+  .badge-logo{ width:260px; height:260px; border-radius:50%;
     background:linear-gradient(135deg,#e0c894 0%, var(--gold) 45%, #b6924a 100%);
     display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
-    margin-bottom:38px; box-shadow:0 20px 45px rgba(11,11,11,.20); border:1px solid rgba(11,11,11,.12); }
-  .hero .badge-logo .name{ font-family:var(--serif); color:var(--black); font-size:36px; letter-spacing:1px; line-height:1; font-weight:600; }
-  .hero .badge-logo .rule{ width:56px; height:1px; background:rgba(11,11,11,.45); margin:10px 0; }
-  .hero .badge-logo .tag{ font-family:var(--sans); color:var(--black); font-size:10px; letter-spacing:1.5px; text-transform:uppercase; max-width:160px; line-height:1.5; font-weight:500; }
+    margin:0 auto; box-shadow:0 20px 45px rgba(11,11,11,.35); border:1px solid rgba(11,11,11,.12); }
+  .badge-logo .name{ font-family:var(--serif); color:var(--black); font-size:42px; letter-spacing:1px; line-height:1; font-weight:600; }
+  .badge-logo .rule{ width:56px; height:1px; background:rgba(11,11,11,.45); margin:12px 0; }
+  .badge-logo .tag{ font-family:var(--sans); color:var(--black); font-size:11px; letter-spacing:1.5px; text-transform:uppercase; max-width:180px; line-height:1.6; font-weight:500; }
   .hero h1{ font-size:clamp(40px,7vw,80px); font-weight:500; letter-spacing:.5px; color:var(--black); }
   .hero .slogan{ font-family:var(--serif); font-style:italic; font-size:clamp(20px,3vw,30px); color:var(--gold); margin:18px 0 24px; }
   .hero p.lead{ font-size:18px; max-width:580px; color:var(--grey); font-weight:300; }
@@ -168,11 +168,6 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap hero-inner">
-    <div class="badge-logo">
-      <div class="name">Viscalys</div>
-      <div class="rule"></div>
-      <div class="tag" data-fr="Là où le naturel devient élégance" data-en="Where the natural becomes elegance">Là où le naturel devient élégance</div>
-    </div>
     <div class="eyebrow" data-fr="Maison française premium · Vocation internationale" data-en="Premium French house · International vocation">Maison française premium · Vocation internationale</div>
     <h1 data-fr="L'élégance française,<br>du naturel à l'exceptionnel." data-en="French elegance,<br>from the natural to the exceptional.">L'élégance française,<br>du naturel à l'exceptionnel.</h1>
     <div class="slogan" data-fr="« L'univers du savoir-faire français. »" data-en="“The world of French savoir-faire.”">« L'univers du savoir-faire français. »</div>
@@ -204,7 +199,11 @@
 <section id="marque">
   <div class="wrap">
     <div class="split reveal">
-      <div class="visual"><div class="ph" data-fr="[ Visuel — univers Viscalys :<br>décoration, senteurs, art de vivre ]" data-en="[ Visual — Viscalys world:<br>décor, fragrance, art of living ]">[ Visuel — univers Viscalys :<br>décoration, senteurs, art de vivre ]</div></div>
+      <div class="visual"><div class="badge-logo">
+        <div class="name">Viscalys</div>
+        <div class="rule"></div>
+        <div class="tag" data-fr="Là où le naturel devient élégance" data-en="Where the natural becomes elegance">Là où le naturel devient élégance</div>
+      </div></div>
       <div class="txt">
         <div class="eyebrow" data-fr="Viscalys · Art de vivre" data-en="Viscalys · Art of living">Viscalys · Art de vivre</div>
         <h2 data-fr="L'art de vivre à la française" data-en="The French art of living">L'art de vivre à la française</h2>
