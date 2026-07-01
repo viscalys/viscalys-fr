@@ -16,9 +16,15 @@ window.VISCALYS_CHAT_API = "https://viscalys-chatbot.onrender.com/api/chat";
   const isEn = () => document.body.classList.contains('en');
 
   /* ---------- Langue ---------- */
+  if(!window.__origHTML) window.__origHTML = new WeakMap();
   window.setLang = function(l){
     document.body.classList.toggle('en', l==='en');
     document.documentElement.lang = l;
+    document.querySelectorAll('[data-fr]').forEach(function(el){
+      if(!window.__origHTML.has(el)) window.__origHTML.set(el, el.innerHTML);
+      var en = el.getAttribute('data-en');
+      el.innerHTML = (l==='en' && en!=null) ? en : window.__origHTML.get(el);
+    });
     document.querySelectorAll('.lang button').forEach(b=>b.classList.remove('active'));
     const btn = document.querySelector('.lang button[data-l="'+l+'"]'); if(btn) btn.classList.add('active');
     try{ localStorage.setItem('viscalys_lang', l); }catch(e){}
