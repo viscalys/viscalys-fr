@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viscalys — L'univers du savoir-faire français | Maison française premium</title>
+<meta name="description" content="Viscalys, marque premium de Visconty Trade Link : produits français premium, art de vivre, représentation commerciale et sourcing à l'international.">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Viscalys",
+  "legalName":"Visconty Trade Link",
+  "url":"https://viscalys.fr",
+  "email":"contact@viscalys.fr",
+  "slogan":"L'univers du savoir-faire français",
+  "description":"Maison française premium : produits français et européens premium, art de vivre, représentation commerciale et sourcing à l'international.",
+  "address":{"@type":"PostalAddress","streetAddress":"38 rue des Mathurins","postalCode":"75008","addressLocality":"Paris","addressCountry":"FR"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0B0B0B; --gold:#C8A75E; --beige:#EFE8DD; --grey:#7A7A7A;
+    --cream:#FBF9F5; --line:rgba(11,11,11,.12); --gold-soft:rgba(200,167,94,.30);
+    --serif:"Playfair Display",Georgia,serif;
+    --sans:"Inter",system-ui,sans-serif;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ background:var(--beige); color:var(--black); font-family:var(--sans); font-weight:300; line-height:1.75; overflow-x:hidden; }
+  h1,h2,h3,.serif{ font-family:var(--serif); font-weight:500; line-height:1.15; }
+  a{ color:inherit; text-decoration:none; }
+  .wrap{ max-width:1200px; margin:0 auto; padding:0 32px; }
+  .gold{ color:var(--gold); }
+  .muted{ color:var(--grey); }
+  .eyebrow{ font-size:12px; letter-spacing:3.5px; text-transform:uppercase; color:var(--gold); font-weight:600; }
+
+  /* Header */
+  header{ position:fixed; top:0; left:0; right:0; z-index:100; padding:20px 0; transition:.4s; }
+  header.scrolled{ background:rgba(239,232,221,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); padding:12px 0; }
+  .nav{ display:flex; align-items:center; justify-content:space-between; }
+  .logo{ font-family:var(--serif); font-size:24px; letter-spacing:4px; text-transform:uppercase; color:var(--black); display:flex; align-items:center; gap:12px; }
+  .logo .mono{ display:inline-flex; align-items:center; justify-content:center; width:40px;height:40px;border:1.5px solid var(--gold); border-radius:50%; color:var(--gold); font-size:20px; letter-spacing:0; }
+  .logo .logo-txt{ display:flex; flex-direction:column; line-height:1; }
+  .logo .logo-txt small{ font-family:var(--sans); font-size:8.5px; letter-spacing:1.6px; text-transform:uppercase; color:var(--gold); margin-top:5px; font-weight:500; }
+  .menu{ display:flex; gap:30px; align-items:center; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; font-weight:500; }
+  .menu a{ color:var(--black); opacity:.8; transition:.3s; } .menu a:hover{ opacity:1; color:var(--gold); }
+  .lang{ display:flex; gap:4px; align-items:center; }
+  .lang button{ background:none; border:none; color:var(--black); opacity:.45; cursor:pointer; font-family:var(--sans); font-size:12px; letter-spacing:1px; font-weight:500; padding:4px; }
+  .lang button.active{ opacity:1; color:var(--gold); }
+  .burger{ display:none; background:none;border:none;color:var(--black);font-size:24px;cursor:pointer; }
+
+  /* Hero */
+  .hero{ min-height:100vh; display:flex; align-items:center; position:relative;
+    background:radial-gradient(circle at 75% 25%, #fff 0%, var(--beige) 55%); }
+  .hero-inner{ position:relative; z-index:2; max-width:780px; }
+  .hero .badge-logo{ width:220px; height:220px; border-radius:50%;
+    background:linear-gradient(135deg,#e0c894 0%, var(--gold) 45%, #b6924a 100%);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+    margin-bottom:38px; box-shadow:0 20px 45px rgba(11,11,11,.20); border:1px solid rgba(11,11,11,.12); }
+  .hero .badge-logo .name{ font-family:var(--serif); color:var(--black); font-size:36px; letter-spacing:1px; line-height:1; font-weight:600; }
+  .hero .badge-logo .rule{ width:56px; height:1px; background:rgba(11,11,11,.45); margin:10px 0; }
+  .hero .badge-logo .tag{ font-family:var(--sans); color:var(--black); font-size:10px; letter-spacing:1.5px; text-transform:uppercase; max-width:160px; line-height:1.5; font-weight:500; }
+  .hero h1{ font-size:clamp(40px,7vw,80px); font-weight:500; letter-spacing:.5px; color:var(--black); }
+  .hero .slogan{ font-family:var(--serif); font-style:italic; font-size:clamp(20px,3vw,30px); color:var(--gold); margin:18px 0 24px; }
+  .hero p.lead{ font-size:18px; max-width:580px; color:var(--grey); font-weight:300; }
+  .cta-row{ display:flex; gap:16px; margin-top:42px; flex-wrap:wrap; }
+  .btn{ font-family:var(--sans); font-size:12px; letter-spacing:2px; text-transform:uppercase; font-weight:500; padding:16px 36px; border:1.5px solid var(--gold); cursor:pointer; transition:.35s; display:inline-block; }
+  .btn-primary{ background:var(--gold); color:#fff; }
+  .btn-primary:hover{ background:transparent; color:var(--black); }
+  .btn-ghost{ color:var(--black); } .btn-ghost:hover{ background:var(--gold); color:#fff; }
+  .btn-light{ color:var(--cream); border-color:var(--gold); } .btn-light:hover{ background:var(--gold); color:var(--black); }
+
+  /* Sections */
+  section{ padding:110px 0; }
+  .sec-head{ max-width:660px; margin-bottom:60px; }
+  .sec-head h2{ font-size:clamp(30px,4.5vw,50px); margin:14px 0 18px; color:var(--black); }
+  .sec-head p{ color:var(--grey); }
+
+  /* Piliers */
+  .pillars{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+  .pillar{ background:var(--cream); border:1px solid var(--line); padding:36px 28px; transition:.4s; }
+  .pillar:hover{ border-color:var(--gold); transform:translateY(-6px); box-shadow:0 20px 40px rgba(11,11,11,.06); }
+  .pillar .n{ font-family:var(--serif); font-size:28px; color:var(--gold); }
+  .pillar h3{ font-size:21px; margin:14px 0 10px; }
+  .pillar p{ font-size:14.5px; color:var(--grey); }
+
+  /* Marque split */
+  .split{ display:grid; grid-template-columns:1fr 1fr; align-items:stretch; border:1px solid var(--line); background:var(--cream); }
+  .split .visual{ background:linear-gradient(150deg,#15130f,var(--black)); min-height:480px; display:flex; align-items:center; justify-content:center; }
+  .split .visual .ph{ font-family:var(--serif); font-style:italic; color:var(--gold); opacity:.75; font-size:20px; text-align:center; padding:30px; }
+  .split .txt{ padding:64px 56px; display:flex; flex-direction:column; justify-content:center; }
+  .split .txt h2{ font-size:clamp(28px,3.5vw,44px); margin:14px 0 18px; }
+  .split .txt p{ color:var(--grey); margin-bottom:16px; }
+
+  /* Expertises */
+  .exp{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+  .exp .card{ background:var(--cream); border:1px solid var(--line); padding:44px 36px; transition:.4s; }
+  .exp .card:hover{ border-color:var(--gold); box-shadow:0 20px 40px rgba(11,11,11,.06); }
+  .exp .card h3{ font-size:25px; margin-bottom:14px; }
+  .exp .card p{ font-size:15px; color:var(--grey); }
+  .exp .card .tag{ font-size:11px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); font-weight:600; }
+
+  /* International — section sombre (contraste premium) */
+  .intl{ background:var(--black); color:var(--cream); }
+  .intl .eyebrow{ color:var(--gold); }
+  .intl .lead-wrap{ max-width:760px; }
+  .intl h2{ font-size:clamp(30px,4.5vw,50px); margin:14px 0 20px; color:var(--cream); }
+  .intl p{ color:rgba(251,249,245,.78); margin-bottom:18px; }
+  .audiences{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:50px; }
+  .audiences .ac{ border:1px solid var(--gold-soft); padding:38px 32px; transition:.4s; }
+  .audiences .ac:hover{ border-color:var(--gold); background:rgba(200,167,94,.05); }
+  .audiences .ac h3{ font-size:24px; color:var(--cream); margin:10px 0 12px; }
+  .audiences .ac p{ color:rgba(251,249,245,.78); margin-bottom:20px; font-size:15px; }
+
+  /* CTA final */
+  .final{ text-align:center; }
+  .final h2{ font-size:clamp(32px,5vw,56px); color:var(--black); }
+  .final .slogan{ font-family:var(--serif); font-style:italic; color:var(--gold); font-size:24px; margin:16px 0 34px; }
+
+  /* Footer */
+  footer{ background:var(--black); color:var(--cream); padding:64px 0 36px; font-size:13.5px; }
+  .foot-grid{ display:grid; grid-template-columns:2fr 1fr 1fr; gap:40px; margin-bottom:40px; }
+  footer .logo{ color:var(--cream); }
+  footer h4{ font-family:var(--sans); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; font-size:11px; color:var(--gold); margin-bottom:16px; }
+  footer a{ color:rgba(251,249,245,.75); display:block; margin-bottom:8px; } footer a:hover{ color:var(--gold); }
+  footer p{ color:rgba(251,249,245,.6); }
+  .legal{ color:rgba(251,249,245,.45); font-size:12px; line-height:1.8; border-top:1px solid rgba(251,249,245,.12); padding-top:24px; }
+
+  /* Reveal */
+  .reveal{ opacity:0; transform:translateY(28px); transition:.9s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in{ opacity:1; transform:none; }
+
+  /* Langue */
+  [data-en]{ display:none; }
+  body.en [data-fr]{ display:none; }
+  body.en [data-en]{ display:revert; }
+
+  @media(max-width:900px){
+    .pillars{ grid-template-columns:repeat(2,1fr); }
+    .split,.exp,.audiences{ grid-template-columns:1fr; }
+    .foot-grid{ grid-template-columns:1fr; }
+    .menu{ display:none; }
+    .burger{ display:block; }
+    .menu.open{ display:flex; position:absolute; top:62px; left:0; right:0; flex-direction:column; background:rgba(239,232,221,.98); padding:24px 32px; gap:18px; border-bottom:1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="logo" href="#"><span class="mono">V</span><span class="logo-txt">Viscalys<small data-fr="L'univers du savoir-faire français" data-en="The world of French savoir-faire">L'univers du savoir-faire français</small></span></a>
+    <nav class="menu" id="menu">
+      <a href="#maison" data-fr="La Maison" data-en="The House">La Maison</a>
+      <a href="#expertises" data-fr="Expertises" data-en="Expertise">Expertises</a>
+      <a href="#marque" data-fr="La Marque" data-en="The Brand">La Marque</a>
+      <a href="#international" data-fr="International" data-en="International">International</a>
+      <a href="#contact" data-fr="Devenir partenaire" data-en="Become a partner">Devenir partenaire</a>
+      <span class="lang">
+        <button data-l="fr" class="active" onclick="setLang('fr')">FR</button><span style="opacity:.3">|</span><button data-l="en" onclick="setLang('en')">EN</button>
+      </span>
+    </nav>
+    <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="badge-logo">
+      <div class="name">Viscalys</div>
+      <div class="rule"></div>
+      <div class="tag" data-fr="Là où le naturel devient élégance" data-en="Where the natural becomes elegance">Là où le naturel devient élégance</div>
+    </div>
+    <div class="eyebrow" data-fr="Maison française premium · Vocation internationale" data-en="Premium French house · International vocation">Maison française premium · Vocation internationale</div>
+    <h1 data-fr="L'élégance française,<br>du naturel à l'exceptionnel." data-en="French elegance,<br>from the natural to the exceptional.">L'élégance française,<br>du naturel à l'exceptionnel.</h1>
+    <div class="slogan" data-fr="« L'univers du savoir-faire français. »" data-en="“The world of French savoir-faire.”">« L'univers du savoir-faire français. »</div>
+    <p class="lead" data-fr="Viscalys sélectionne le meilleur du savoir-faire français et européen — porté par de grands artisans et industriels — et le fait rayonner à l'international. Une alternative premium, exigeante et durable, face aux produits à bas coût." data-en="Viscalys curates the finest French and European craftsmanship — created by leading artisans and manufacturers — and champions it worldwide. A premium, demanding and lasting alternative to low-cost goods.">Viscalys sélectionne le meilleur du savoir-faire français et européen — porté par de grands artisans et industriels — et le fait rayonner à l'international. Une alternative premium, exigeante et durable, face aux produits à bas coût.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#marque" data-fr="Découvrir" data-en="Discover">Découvrir</a>
+      <a class="btn btn-ghost" href="#contact" data-fr="Devenir partenaire" data-en="Become a partner">Devenir partenaire</a>
+    </div>
+  </div>
+</section>
+
+<!-- PILIERS -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow" data-fr="En un coup d'œil" data-en="At a glance">En un coup d'œil</div>
+      <h2 data-fr="Une maison, quatre forces." data-en="One house, four strengths.">Une maison, quatre forces.</h2>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal"><div class="n">01</div><h3 data-fr="Marque premium" data-en="Premium brand">Marque premium</h3><p data-fr="Viscalys, une sélection de produits français raffinés pour l'art de vivre." data-en="Viscalys, a curation of refined French products for the art of living.">Viscalys, une sélection de produits français raffinés pour l'art de vivre.</p></div>
+      <div class="pillar reveal"><div class="n">02</div><h3 data-fr="Représentation & sourcing" data-en="Representation & sourcing">Représentation & sourcing</h3><p data-fr="Agent commercial et intermédiaire, nous relions marques et marchés." data-en="As commercial agent and intermediary, we connect brands and markets.">Agent commercial et intermédiaire, nous relions marques et marchés.</p></div>
+      <div class="pillar reveal"><div class="n">03</div><h3 data-fr="International" data-en="International">International</h3><p data-fr="Une vocation export : faire voyager la French touch au-delà des frontières." data-en="An export vocation: carrying the French touch beyond borders.">Une vocation export : faire voyager la French touch au-delà des frontières.</p></div>
+      <div class="pillar reveal"><div class="n">04</div><h3 data-fr="Savoir-faire français" data-en="French savoir-faire">Savoir-faire français</h3><p data-fr="L'exigence, l'élégance et l'authenticité au cœur de chaque choix." data-en="Excellence, elegance and authenticity at the heart of every choice.">L'exigence, l'élégance et l'authenticité au cœur de chaque choix.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUE -->
+<section id="marque">
+  <div class="wrap">
+    <div class="split reveal">
+      <div class="visual"><div class="ph" data-fr="[ Visuel — univers Viscalys :<br>décoration, senteurs, art de vivre ]" data-en="[ Visual — Viscalys world:<br>décor, fragrance, art of living ]">[ Visuel — univers Viscalys :<br>décoration, senteurs, art de vivre ]</div></div>
+      <div class="txt">
+        <div class="eyebrow" data-fr="Viscalys · Art de vivre" data-en="Viscalys · Art of living">Viscalys · Art de vivre</div>
+        <h2 data-fr="L'art de vivre à la française" data-en="The French art of living">L'art de vivre à la française</h2>
+        <p class="serif" style="font-style:italic; color:var(--gold); font-size:21px; margin-bottom:18px" data-fr="« Là où le naturel devient élégance. »" data-en="“Where the natural becomes elegance.”">« Là où le naturel devient élégance. »</p>
+        <p data-fr="Notre univers art de vivre célèbre l'élégance née du naturel : décoration d'intérieur, senteurs et parfums de maison, bien-être chez soi et univers du compagnon (Pet). Chaque sélection révèle un savoir-faire d'exception." data-en="Our art-of-living world celebrates the elegance born from the natural: interior décor, home fragrance, well-being at home and the pet universe. Every selection reveals exceptional craftsmanship.">Notre univers art de vivre célèbre l'élégance née du naturel : décoration d'intérieur, senteurs et parfums de maison, bien-être chez soi et univers du compagnon (Pet). Chaque sélection révèle un savoir-faire d'exception.</p>
+        <p data-fr="Une exigence : ne retenir que le meilleur de la création française, et le porter avec raffinement vers le monde." data-en="One standard: to retain only the finest of French creation, and carry it with refinement to the world.">Une exigence : ne retenir que le meilleur de la création française, et le porter avec raffinement vers le monde.</p>
+        <p style="margin-top:8px"><span class="gold serif" style="font-style:italic" data-fr="Boutique en ligne — bientôt disponible." data-en="Online boutique — coming soon.">Boutique en ligne — bientôt disponible.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISES -->
+<section id="expertises">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow" data-fr="Nos expertises" data-en="Our expertise">Nos expertises</div>
+      <h2 data-fr="Approvisionneur-conseil, agent de votre réussite." data-en="Procurement advisor, agent of your success.">Approvisionneur-conseil, agent de votre réussite.</h2>
+      <p data-fr="Agent commercial et intermédiaire du commerce, la maison met son réseau et son exigence au service des marques, des artisans et des marchés — en France comme à l'export." data-en="As commercial agent and trade intermediary, the house puts its network and standards at the service of brands, artisans and markets — in France and for export.">Agent commercial et intermédiaire du commerce, la maison met son réseau et son exigence au service des marques, des artisans et des marchés — en France comme à l'export.</p>
+    </div>
+    <div class="exp">
+      <div class="card reveal"><div class="tag" data-fr="Représentation" data-en="Representation">Représentation</div><h3 data-fr="Agent commercial & représentation" data-en="Commercial agent & representation">Agent commercial & représentation</h3><p data-fr="Intermédiation entre marques et marchés, multi-secteurs — industrie, énergie, bâtiment et produits premium. Nous portons votre offre là où elle doit être vue." data-en="Intermediation between brands and markets across sectors — industry, energy, construction and premium goods. We take your offer where it deserves to be seen.">Intermédiation entre marques et marchés, multi-secteurs — industrie, énergie, bâtiment et produits premium. Nous portons votre offre là où elle doit être vue.</p></div>
+      <div class="card reveal"><div class="tag" data-fr="Sourcing" data-en="Sourcing">Sourcing</div><h3 data-fr="Sourcing & approvisionnement" data-en="Sourcing & supply">Sourcing & approvisionnement</h3><p data-fr="Identification, sélection et mise en relation entre fournisseurs et acheteurs, en France comme à l'international. Le bon produit, le bon partenaire, au bon moment." data-en="Identifying, selecting and connecting suppliers and buyers, in France and abroad. The right product, the right partner, at the right time.">Identification, sélection et mise en relation entre fournisseurs et acheteurs, en France comme à l'international. Le bon produit, le bon partenaire, au bon moment.</p></div>
+      <div class="card reveal"><div class="tag" data-fr="Conseil" data-en="Advisory">Conseil</div><h3 data-fr="Conseil en approvisionnement" data-en="Procurement advisory">Conseil en approvisionnement</h3><p data-fr="Optimisation et fiabilisation des chaînes d'approvisionnement : nous sécurisons vos flux et améliorons vos conditions, avec rigueur et transparence." data-en="Optimising and securing supply chains: we safeguard your flows and improve your terms, with rigour and transparency.">Optimisation et fiabilisation des chaînes d'approvisionnement : nous sécurisons vos flux et améliorons vos conditions, avec rigueur et transparence.</p></div>
+      <div class="card reveal"><div class="tag" data-fr="Start-up" data-en="Start-ups">Start-up</div><h3 data-fr="Promotion & accompagnement de start-up" data-en="Start-up promotion & support">Promotion & accompagnement de start-up</h3><p data-fr="Mise en avant et déploiement commercial de jeunes marques : nous accompagnons les projets prometteurs vers leurs premiers marchés." data-en="Showcasing and commercially deploying young brands: we guide promising projects toward their first markets.">Mise en avant et déploiement commercial de jeunes marques : nous accompagnons les projets prometteurs vers leurs premiers marchés.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERNATIONAL -->
+<section id="international" class="intl">
+  <div class="wrap">
+    <div class="lead-wrap reveal">
+      <div class="eyebrow" data-fr="International / Export" data-en="International / Export">International / Export</div>
+      <h2 data-fr="Le premium français, partout dans le monde." data-en="French premium, everywhere in the world.">Le premium français, partout dans le monde.</h2>
+      <p data-fr="Face à la déferlante de produits à bas coût aux normes incertaines, Viscalys défend une autre voie : des produits français et européens de qualité premium, durables et responsables — accessibles à une clientèle exigeante, y compris la classe moyenne qui aspire au mieux." data-en="Against the flood of low-cost goods with uncertain standards, Viscalys stands for another way: premium-quality French and European products, durable and responsible — accessible to a discerning clientele, including the middle class that aspires to better.">Face à la déferlante de produits à bas coût aux normes incertaines, Viscalys défend une autre voie : des produits français et européens de qualité premium, durables et responsables — accessibles à une clientèle exigeante, y compris la classe moyenne qui aspire au mieux.</p>
+      <p data-fr="La French touch comme signature, l'exigence comme méthode. Nous relions le meilleur des artisans français aux marchés du monde." data-en="The French touch as signature, excellence as method. We connect the finest French artisans to markets worldwide.">La French touch comme signature, l'exigence comme méthode. Nous relions le meilleur des artisans français aux marchés du monde.</p>
+    </div>
+    <div class="audiences">
+      <div class="ac reveal">
+        <div class="eyebrow" data-fr="Acheteurs & distributeurs" data-en="Buyers & distributors">Acheteurs & distributeurs</div>
+        <h3 data-fr="Vous achetez à l'international" data-en="You buy internationally">Vous achetez à l'international</h3>
+        <p data-fr="Distributeurs, importateurs, enseignes et concept stores : offrez à votre clientèle une sélection française authentique, premium et différenciante, avec un partenaire réactif et fiable." data-en="Distributors, importers, retailers and concept stores: offer your clientele an authentic, premium and distinctive French selection, with a responsive and reliable partner.">Distributeurs, importateurs, enseignes et concept stores : offrez à votre clientèle une sélection française authentique, premium et différenciante, avec un partenaire réactif et fiable.</p>
+        <a class="btn btn-light" href="#contact" data-fr="Devenir partenaire" data-en="Become a partner">Devenir partenaire</a>
+      </div>
+      <div class="ac reveal">
+        <div class="eyebrow" data-fr="Fournisseurs & artisans" data-en="Suppliers & artisans">Fournisseurs & artisans</div>
+        <h3 data-fr="Vous fabriquez en France" data-en="You manufacture in France">Vous fabriquez en France</h3>
+        <p data-fr="Marques, artisans et industriels français : portez votre savoir-faire vers de nouveaux marchés. Nous représentons, sourçons et déployons votre offre, en France et à l'export." data-en="French brands, artisans and manufacturers: take your savoir-faire to new markets. We represent, source and deploy your offer, in France and abroad.">Marques, artisans et industriels français : portez votre savoir-faire vers de nouveaux marchés. Nous représentons, sourçons et déployons votre offre, en France et à l'export.</p>
+        <a class="btn btn-light" href="#contact" data-fr="Nous confier votre marque" data-en="Entrust us with your brand">Nous confier votre marque</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="contact" class="final">
+  <div class="wrap reveal">
+    <div class="eyebrow" data-fr="Devenir partenaire" data-en="Become a partner">Devenir partenaire</div>
+    <h2 data-fr="Donnons de l'élégance à votre développement." data-en="Let's bring elegance to your growth.">Donnons de l'élégance à votre développement.</h2>
+    <div class="slogan" data-fr="« L'univers du savoir-faire français. »" data-en="“The world of French savoir-faire.”">« L'univers du savoir-faire français. »</div>
+    <a class="btn btn-primary" href="mailto:contact@viscalys.fr" data-fr="Nous écrire" data-en="Contact us">Nous écrire</a>
+    <p class="muted" style="margin-top:22px; font-size:14px" data-fr="contact@viscalys.fr — réponse sous 48 h ouvrées." data-en="contact@viscalys.fr — reply within 48 business hours.">contact@viscalys.fr — réponse sous 48 h ouvrées.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="font-size:22px; margin-bottom:14px"><span class="mono">V</span> Viscalys</div>
+        <p style="max-width:340px" data-fr="L'univers du savoir-faire français. Produits français et européens premium, art de vivre et représentation commerciale à l'international." data-en="The world of French savoir-faire. Premium French and European products, art of living and international commercial representation.">L'univers du savoir-faire français. Produits français et européens premium, art de vivre et représentation commerciale à l'international.</p>
+      </div>
+      <div>
+        <h4 data-fr="Navigation" data-en="Navigation">Navigation</h4>
+        <a href="#maison" data-fr="La Maison" data-en="The House">La Maison</a>
+        <a href="#expertises" data-fr="Expertises" data-en="Expertise">Expertises</a>
+        <a href="#marque" data-fr="La Marque" data-en="The Brand">La Marque</a>
+        <a href="#international" data-fr="International" data-en="International">International</a>
+      </div>
+      <div>
+        <h4 data-fr="Contact" data-en="Contact">Contact</h4>
+        <a href="mailto:contact@viscalys.fr">contact@viscalys.fr</a>
+        <a href="mentions-legales.html" data-fr="Mentions légales" data-en="Legal notice">Mentions légales</a>
+        <a href="confidentialite.html" data-fr="Confidentialité" data-en="Privacy">Confidentialité</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span data-fr="Viscalys® propulsé par la SARL Visconty Trade Link — SIREN 829 320 266 · APE 4619B · 38, rue des Mathurins, 75008 Paris." data-en="Viscalys® powered by Visconty Trade Link (SARL) — SIREN 829 320 266 · APE 4619B · 38, rue des Mathurins, 75008 Paris.">Viscalys® propulsé par la SARL Visconty Trade Link — SIREN 829 320 266 · APE 4619B · 38, rue des Mathurins, 75008 Paris.</span>
+      <span style="display:block; margin-top:8px">© <span id="yr"></span> Viscalys · <a href="mentions-legales.html" style="display:inline; opacity:.8" data-fr="Mentions légales" data-en="Legal notice">Mentions légales</a> · <a href="confidentialite.html" style="display:inline; opacity:.8" data-fr="Confidentialité" data-en="Privacy">Confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function setLang(l){
+    document.body.classList.toggle('en', l==='en');
+    document.documentElement.lang = l;
+    document.querySelectorAll('.lang button').forEach(b=>b.classList.remove('active'));
+    document.querySelector('.lang button[onclick*="'+l+'"]').classList.add('active');
+    try{ localStorage.setItem('viscalys_lang', l); }catch(e){}
+  }
+  try{ const s=localStorage.getItem('viscalys_lang'); if(s==='en') setLang('en'); }catch(e){}
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const hdr=document.getElementById('hdr');
+  addEventListener('scroll',()=>hdr.classList.toggle('scrolled', scrollY>40));
+
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
+</script>
+<script src="assets/app.js"></script>
+</body>
+</html>
