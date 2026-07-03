@@ -173,3 +173,37 @@ window.VISCALYS_CHAT_API = "https://viscalys-chatbot.onrender.com/api/chat";
     if(window.setLang) window.setLang(document.body.classList.contains('en')?'en':'fr');
   }
 })();
+
+
+       /* ============================================================
+   VISCALYS — Patch confiance & conversion (juillet 2026)
+   Ajouts uniquement : rien d'existant ci-dessus n'est modifie.
+   ============================================================ */
+
+/* 1) Reveille le serveur du chatbot des l'arrivee sur le site (offre
+      Render gratuite = 1er appel lent). */
+document.addEventListener('DOMContentLoaded', function(){
+     try{
+            if(window.VISCALYS_CHAT_API){
+                     fetch(window.VISCALYS_CHAT_API.replace('/api/chat','/api/health')).catch(function(){});
+            }
+     }catch(e){}
+});
+
+/* 2) Filet de securite pour les animations 'reveal' : affichage force
+      apres 2,5 s si l'observateur ne s'est pas declenche. */
+document.addEventListener('DOMContentLoaded', function(){
+     setTimeout(function(){
+            document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ el.classList.add('in'); });
+     }, 2500);
+});
+
+/* 3) Evite que la bulle chat ne recouvre le bandeau cookies. */
+document.addEventListener('DOMContentLoaded', function(){
+     var mo = new MutationObserver(function(){
+            var cookieBar = document.querySelector('.cookie.show');
+            var fab = document.getElementById('vfab');
+            if(fab) fab.style.bottom = cookieBar ? '96px' : '';
+     });
+     mo.observe(document.body, {childList:true});
+});
