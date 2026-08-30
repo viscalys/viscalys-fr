@@ -3,8 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viscalys — L'univers du savoir-faire français | Maison française premium</title>
+<title>Viscalys — L'univers du savoir-faire français</title>
 <meta name="description" content="Viscalys, marque premium de Visconty Trade Link : produits français premium, art de vivre, représentation commerciale et sourcing à l'international.">
+<link rel="canonical" href="https://www.viscalys.fr/">
+<link rel="alternate" hreflang="fr" href="https://www.viscalys.fr/">
+<link rel="alternate" hreflang="en" href="https://www.viscalys.fr/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.viscalys.fr/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Viscalys">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://www.viscalys.fr/">
+<meta property="og:title" content="Viscalys — L'univers du savoir-faire français">
+<meta property="og:description" content="Viscalys, marque premium de Visconty Trade Link : produits français premium, art de vivre, représentation commerciale et sourcing à l'international.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Viscalys — L'univers du savoir-faire français">
+<meta name="twitter:description" content="Viscalys, marque premium de Visconty Trade Link : produits français premium, art de vivre, représentation commerciale et sourcing à l'international.">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -49,8 +63,9 @@
   .menu{ display:flex; gap:30px; align-items:center; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; font-weight:500; }
   .menu a{ color:var(--black); opacity:.8; transition:.3s; } .menu a:hover{ opacity:1; color:var(--gold); }
   .lang{ display:flex; gap:4px; align-items:center; }
-  .lang button{ background:none; border:none; color:var(--black); opacity:.45; cursor:pointer; font-family:var(--sans); font-size:12px; letter-spacing:1px; font-weight:500; padding:4px; }
-  .lang button.active{ opacity:1; color:var(--gold); }
+  .lang a,.lang span.active{ background:none; border:none; color:var(--black); opacity:.45; cursor:pointer; font-family:var(--sans); font-size:12px; letter-spacing:1px; font-weight:500; padding:4px; }
+  .lang .active{ opacity:1; color:var(--gold); }
+  .lang a:hover{ opacity:1; }
   .burger{ display:none; background:none;border:none;color:var(--black);font-size:24px;cursor:pointer; }
 
   /* Hero */
@@ -82,7 +97,7 @@
 
   /* Piliers */
   .pillars{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
-  .pillar{ background:var(--cream); border:1px solid var(--line); padding:36px 28px; transition:.4s; }
+  .pillar{ background:var(--cream); border:1px solid var(--line); padding:36px 28px; transition:.4s; display:block; }
   .pillar:hover{ border-color:var(--gold); transform:translateY(-6px); box-shadow:0 20px 40px rgba(11,11,11,.06); }
   .pillar .n{ font-family:var(--serif); font-size:28px; color:var(--gold); }
   .pillar h3{ font-size:21px; margin:14px 0 10px; }
@@ -153,13 +168,13 @@
   <div class="wrap nav">
     <a class="logo" href="#"><span class="mono">V</span><span class="logo-txt">Viscalys<small data-fr="L'univers du savoir-faire français" data-en="The world of French savoir-faire">L'univers du savoir-faire français</small></span></a>
     <nav class="menu" id="menu">
-      <a href="#maison" data-fr="La Maison" data-en="The House">La Maison</a>
+      <a href="maison.html" data-fr="La Maison" data-en="The House">La Maison</a>
       <a href="#expertises" data-fr="Expertises" data-en="Expertise">Expertises</a>
       <a href="#marque" data-fr="La Marque" data-en="The Brand">La Marque</a>
       <a href="#international" data-fr="International" data-en="International">International</a>
       <a href="#contact" data-fr="Devenir partenaire" data-en="Become a partner">Devenir partenaire</a>
       <span class="lang">
-        <button data-l="fr" class="active" onclick="setLang('fr')">FR</button><span style="opacity:.3">|</span><button data-l="en" onclick="setLang('en')">EN</button>
+        <span class="active" data-l="fr">FR</span><span style="opacity:.3">|</span><a href="en/index.html" data-l="en">EN</a>
       </span>
     </nav>
     <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
@@ -188,10 +203,10 @@
       <h2 data-fr="Une maison, quatre forces." data-en="One house, four strengths.">Une maison, quatre forces.</h2>
     </div>
     <div class="pillars">
-      <div class="pillar reveal"><div class="n">01</div><h3 data-fr="Marque premium" data-en="Premium brand">Marque premium</h3><p data-fr="Viscalys, une sélection de produits français raffinés pour l'art de vivre." data-en="Viscalys, a curation of refined French products for the art of living.">Viscalys, une sélection de produits français raffinés pour l'art de vivre.</p></div>
-      <div class="pillar reveal"><div class="n">02</div><h3 data-fr="Représentation & sourcing" data-en="Representation & sourcing">Représentation & sourcing</h3><p data-fr="Agent commercial et intermédiaire, nous relions marques et marchés." data-en="As commercial agent and intermediary, we connect brands and markets.">Agent commercial et intermédiaire, nous relions marques et marchés.</p></div>
-      <div class="pillar reveal"><div class="n">03</div><h3 data-fr="International" data-en="International">International</h3><p data-fr="Une vocation export : faire voyager la French touch au-delà des frontières." data-en="An export vocation: carrying the French touch beyond borders.">Une vocation export : faire voyager la French touch au-delà des frontières.</p></div>
-      <div class="pillar reveal"><div class="n">04</div><h3 data-fr="Savoir-faire français" data-en="French savoir-faire">Savoir-faire français</h3><p data-fr="L'exigence, l'élégance et l'authenticité au cœur de chaque choix." data-en="Excellence, elegance and authenticity at the heart of every choice.">L'exigence, l'élégance et l'authenticité au cœur de chaque choix.</p></div>
+      <a class="pillar reveal" href="art-de-vivre.html"><div class="n">01</div><h3 data-fr="Marque premium" data-en="Premium brand">Marque premium</h3><p data-fr="Viscalys, une sélection de produits français raffinés pour l'art de vivre." data-en="Viscalys, a curation of refined French products for the art of living.">Viscalys, une sélection de produits français raffinés pour l'art de vivre.</p></a>
+      <a class="pillar reveal" href="expertises.html"><div class="n">02</div><h3 data-fr="Représentation & sourcing" data-en="Representation & sourcing">Représentation & sourcing</h3><p data-fr="Agent commercial et intermédiaire, nous relions marques et marchés." data-en="As commercial agent and intermediary, we connect brands and markets.">Agent commercial et intermédiaire, nous relions marques et marchés.</p></a>
+      <a class="pillar reveal" href="international.html"><div class="n">03</div><h3 data-fr="International" data-en="International">International</h3><p data-fr="Une vocation export : faire voyager la French touch au-delà des frontières." data-en="An export vocation: carrying the French touch beyond borders.">Une vocation export : faire voyager la French touch au-delà des frontières.</p></a>
+      <a class="pillar reveal" href="maison.html"><div class="n">04</div><h3 data-fr="Savoir-faire français" data-en="French savoir-faire">Savoir-faire français</h3><p data-fr="L'exigence, l'élégance et l'authenticité au cœur de chaque choix." data-en="Excellence, elegance and authenticity at the heart of every choice.">L'exigence, l'élégance et l'authenticité au cœur de chaque choix.</p></a>
     </div>
   </div>
 </section>
@@ -212,6 +227,7 @@
         <p data-fr="Notre univers art de vivre célèbre l'élégance née du naturel : décoration d'intérieur, senteurs et parfums de maison, bien-être chez soi et univers du compagnon (Pet). Chaque sélection révèle un savoir-faire d'exception." data-en="Our art-of-living world celebrates the elegance born from the natural: interior décor, home fragrance, well-being at home and the pet universe. Every selection reveals exceptional craftsmanship.">Notre univers art de vivre célèbre l'élégance née du naturel : décoration d'intérieur, senteurs et parfums de maison, bien-être chez soi et univers du compagnon (Pet). Chaque sélection révèle un savoir-faire d'exception.</p>
         <p data-fr="Une exigence : ne retenir que le meilleur de la création française, et le porter avec raffinement vers le monde." data-en="One standard: to retain only the finest of French creation, and carry it with refinement to the world.">Une exigence : ne retenir que le meilleur de la création française, et le porter avec raffinement vers le monde.</p>
         <p style="margin-top:8px"><span class="gold serif" style="font-style:italic" data-fr="Boutique en ligne — bientôt disponible." data-en="Online boutique — coming soon.">Boutique en ligne — bientôt disponible.</span></p>
+        <p style="margin-top:18px"><a class="btn btn-ghost" href="art-de-vivre.html" data-fr="Découvrir l'univers Art de vivre →" data-en="Discover the Art of living universe →">Découvrir l'univers Art de vivre →</a></p>
       </div>
     </div>
   </div>
@@ -231,6 +247,7 @@
       <div class="card reveal"><div class="tag" data-fr="Conseil" data-en="Advisory">Conseil</div><h3 data-fr="Conseil en approvisionnement" data-en="Procurement advisory">Conseil en approvisionnement</h3><p data-fr="Optimisation et fiabilisation des chaînes d'approvisionnement : nous sécurisons vos flux et améliorons vos conditions, avec rigueur et transparence." data-en="Optimising and securing supply chains: we safeguard your flows and improve your terms, with rigour and transparency.">Optimisation et fiabilisation des chaînes d'approvisionnement : nous sécurisons vos flux et améliorons vos conditions, avec rigueur et transparence.</p></div>
       <div class="card reveal"><div class="tag" data-fr="Start-up" data-en="Start-ups">Start-up</div><h3 data-fr="Promotion & accompagnement de start-up" data-en="Start-up promotion & support">Promotion & accompagnement de start-up</h3><p data-fr="Mise en avant et déploiement commercial de jeunes marques : nous accompagnons les projets prometteurs vers leurs premiers marchés." data-en="Showcasing and commercially deploying young brands: we guide promising projects toward their first markets.">Mise en avant et déploiement commercial de jeunes marques : nous accompagnons les projets prometteurs vers leurs premiers marchés.</p></div>
     </div>
+    <p style="margin-top:34px"><a class="btn btn-ghost" href="expertises.html" data-fr="Voir le détail de nos expertises →" data-en="See the detail of our expertise →">Voir le détail de nos expertises →</a></p>
   </div>
 </section>
 
@@ -242,6 +259,7 @@
       <h2 data-fr="Le premium français, partout dans le monde." data-en="French premium, everywhere in the world.">Le premium français, partout dans le monde.</h2>
       <p data-fr="Face à la déferlante de produits à bas coût aux normes incertaines, Viscalys défend une autre voie : des produits français et européens de qualité premium, durables et responsables — accessibles à une clientèle exigeante, y compris la classe moyenne qui aspire au mieux." data-en="Against the flood of low-cost goods with uncertain standards, Viscalys stands for another way: premium-quality French and European products, durable and responsible — accessible to a discerning clientele, including the middle class that aspires to better.">Face à la déferlante de produits à bas coût aux normes incertaines, Viscalys défend une autre voie : des produits français et européens de qualité premium, durables et responsables — accessibles à une clientèle exigeante, y compris la classe moyenne qui aspire au mieux.</p>
       <p data-fr="La French touch comme signature, l'exigence comme méthode. Nous relions le meilleur des artisans français aux marchés du monde." data-en="The French touch as signature, excellence as method. We connect the finest French artisans to markets worldwide.">La French touch comme signature, l'exigence comme méthode. Nous relions le meilleur des artisans français aux marchés du monde.</p>
+      <p><a class="btn btn-light" href="international.html" style="margin-top:6px" data-fr="En savoir plus sur notre vocation export →" data-en="Learn more about our export vocation →">En savoir plus sur notre vocation export →</a></p>
     </div>
     <div class="audiences">
       <div class="ac reveal">
@@ -291,7 +309,7 @@
       </div>
       <div>
         <h4 data-fr="Navigation" data-en="Navigation">Navigation</h4>
-        <a href="#maison" data-fr="La Maison" data-en="The House">La Maison</a>
+        <a href="maison.html" data-fr="La Maison" data-en="The House">La Maison</a>
         <a href="#expertises" data-fr="Expertises" data-en="Expertise">Expertises</a>
         <a href="#marque" data-fr="La Marque" data-en="The Brand">La Marque</a>
         <a href="#international" data-fr="International" data-en="International">International</a>
@@ -320,12 +338,8 @@
       var en = el.getAttribute('data-en');
       el.innerHTML = (l==='en' && en!=null) ? en : window.__origHTML.get(el);
     });
-    document.querySelectorAll('.lang button').forEach(b=>b.classList.remove('active'));
-    var ab=document.querySelector('.lang button[onclick*="'+l+'"]'); if(ab) ab.classList.add('active');
     try{ localStorage.setItem('viscalys_lang', l); }catch(e){}
   }
-  try{ const s=localStorage.getItem('viscalys_lang'); if(s==='en') setLang('en'); }catch(e){}
-
   document.getElementById('yr').textContent = new Date().getFullYear();
   const hdr=document.getElementById('hdr');
   addEventListener('scroll',()=>hdr.classList.toggle('scrolled', scrollY>40));
