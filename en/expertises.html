@@ -313,5 +313,7 @@
     answer(q).then(a=>pushMsg(a,'bot')); }
   function askAbout(id){ const d=DOMAINS.find(x=>x.id===id); openChat(); const q=isEn()?('Tell me about '+d.en):('Parlez-moi de : '+d.fr); pushMsg(q,'me'); answer(isEn()?d.en:d.fr).then(a=>pushMsg(a,'bot')); }
 </script>
+<script>try{localStorage.setItem('viscalys_lang','en');}catch(e){}</script>
+<script src="../app.js"></script>
 </body>
 </html>
