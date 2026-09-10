@@ -17,7 +17,13 @@ window.VISCALYS_CHAT_API = "https://viscalys-chatbot.onrender.com/api/chat";
 
   /* ---------- Langue ---------- */
   if(!window.__origHTML) window.__origHTML = new WeakMap();
-  window.setLang = function(l){
+  /* Les pages anglaises statiques vivent sous /en/ : sur celles-ci, aucune
+     traduction JS ne doit s'appliquer. Sur les pages françaises, la bascule
+     FR/EN reste en place — mais elle n'est mémorisée que si l'utilisateur la
+     demande explicitement (bouton), jamais par simple visite d'une page /en/. */
+  const isEnPath = /(^|\/)en\//.test(location.pathname);
+
+  window.setLang = function(l, persist){
     document.body.classList.toggle('en', l==='en');
     document.documentElement.lang = l;
     document.querySelectorAll('[data-fr]').forEach(function(el){
@@ -27,11 +33,18 @@ window.VISCALYS_CHAT_API = "https://viscalys-chatbot.onrender.com/api/chat";
     });
     document.querySelectorAll('.lang button').forEach(b=>b.classList.remove('active'));
     const btn = document.querySelector('.lang button[data-l="'+l+'"]'); if(btn) btn.classList.add('active');
-    try{ localStorage.setItem('viscalys_lang', l); }catch(e){}
+    if(persist !== false){ try{ localStorage.setItem('viscalys_lang2', l); }catch(e){} }
   };
 
   document.addEventListener('DOMContentLoaded', function(){
-    try{ if(localStorage.getItem('viscalys_lang')==='en') window.setLang('en'); }catch(e){}
+    if(!isEnPath){
+      // ?lang=en : arrivée depuis une page anglaise (pages légales partagées).
+      // Traduit la page sans mémoriser la préférence.
+      var q = null;
+      try{ q = new URLSearchParams(location.search).get('lang'); }catch(e){}
+      if(q === 'en'){ window.setLang('en', false); }
+      else { try{ if(localStorage.getItem('viscalys_lang2')==='en') window.setLang('en'); }catch(e){} }
+    }
 
     // Header scrolled
     const hdr = document.querySelector('header');
