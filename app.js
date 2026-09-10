@@ -182,8 +182,9 @@ window.VISCALYS_CHAT_API = "https://viscalys-chatbot.onrender.com/api/chat";
     fab.onclick=open; panel.querySelector('#vx').onclick=close; panel.querySelector('#vsend').onclick=send;
     input.addEventListener('keydown',e=>{ if(e.key==='Enter') send(); });
     window.viscalysOpenChat=open;
-    // Retraduit le widget fraîchement injecté selon la langue courante
-    if(window.setLang) window.setLang(document.body.classList.contains('en')?'en':'fr');
+    // Retraduit le widget fraîchement injecté selon la langue courante.
+    // persist=false : il s'agit d'un rendu technique, pas d'un choix utilisateur.
+    if(window.setLang) window.setLang(document.body.classList.contains('en')?'en':'fr', false);
   }
 })();
 
