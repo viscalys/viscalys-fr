@@ -107,6 +107,13 @@
   .split{ display:grid; grid-template-columns:1fr 1fr; align-items:stretch; border:1px solid var(--line); background:var(--cream); }
   .split .visual{ background:linear-gradient(150deg,#15130f,var(--black)); min-height:480px; display:flex; align-items:center; justify-content:center; }
   .split .visual .ph{ font-family:var(--serif); font-style:italic; color:var(--gold); opacity:.75; font-size:20px; text-align:center; padding:30px; }
+  /* Visuel Art de vivre */
+  .split .visual-art-vivre{ min-height:480px; overflow:hidden; background:#e9dfd1; padding:0; display:block; }
+  .split .visual-art-vivre img{ display:block; width:100%; height:100%; min-height:480px; object-fit:cover; object-position:center center; }
+  @media (max-width:768px){
+    .split .visual-art-vivre{ min-height:430px; }
+    .split .visual-art-vivre img{ min-height:430px; object-position:center center; }
+  }
   .split .txt{ padding:64px 56px; display:flex; flex-direction:column; justify-content:center; }
   .split .txt h2{ font-size:clamp(28px,3.5vw,44px); margin:14px 0 18px; }
   .split .txt p{ color:var(--grey); margin-bottom:16px; }
@@ -215,11 +222,16 @@
 <section id="marque">
   <div class="wrap">
     <div class="split reveal">
-      <div class="visual"><div class="badge-logo">
-        <div class="name">Viscalys</div>
-        <div class="rule"></div>
-        <div class="tag" data-fr="Là où le naturel devient élégance" data-en="Where the natural becomes elegance">Là où le naturel devient élégance</div>
-      </div></div>
+      <div class="visual visual-art-vivre">
+        <img
+          src="images/viscalys-art-de-vivre.webp"
+          alt="Art de vivre à la française — décoration naturelle et élégante VISCALYS"
+          width="1120"
+          height="1400"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
       <div class="txt">
         <div class="eyebrow" data-fr="Viscalys · Art de vivre" data-en="Viscalys · Art of living">Viscalys · Art de vivre</div>
         <h2 data-fr="L'art de vivre à la française" data-en="The French art of living">L'art de vivre à la française</h2>
